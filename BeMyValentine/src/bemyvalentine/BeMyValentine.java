@@ -15,7 +15,10 @@ public class BeMyValentine {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+Parameters frame=new Parameters();
+frame.pack();
+frame.setVisible(true);
+// TODO code application logic here
     }
     
 }
