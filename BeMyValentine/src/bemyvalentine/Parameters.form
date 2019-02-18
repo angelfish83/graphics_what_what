@@ -114,6 +114,9 @@
           <Dimension value="[200, 200]"/>
         </Property>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;    @Override&#xa;    protected void paintComponent(Graphics g) {&#xa;        super.paintComponent(g);&#xa;        g.setColor(Color.YELLOW);&#xa;        g.fillRect(jSlider1.getValue(), jSlider2.getValue(), jSlider3.getValue(), jSlider4.getValue());&#xa;&#xa;    }&#xa;}&#xa;"/>
+      </AuxValues>
 
       <Layout>
         <DimensionLayout dim="0">

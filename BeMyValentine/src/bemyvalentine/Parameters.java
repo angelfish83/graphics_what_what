@@ -5,6 +5,9 @@
  */
 package bemyvalentine;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 /**
  *
  * @author User8300
@@ -28,7 +31,16 @@ public class Parameters extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel(){
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.setColor(Color.YELLOW);
+                g.fillRect(jSlider1.getValue(), jSlider2.getValue(), jSlider3.getValue(), jSlider4.getValue());
+
+            }
+        }
+        ;
         jSlider1 = new javax.swing.JSlider();
         jSlider2 = new javax.swing.JSlider();
         jSlider3 = new javax.swing.JSlider();
@@ -180,21 +192,27 @@ public class Parameters extends javax.swing.JFrame {
 
     private void jSlider1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider1MouseDragged
 jLabel1.setText("x=" + jSlider1.getValue());
+jPanel2.repaint();
         // TODO add your handling code here:
     }//GEN-LAST:event_jSlider1MouseDragged
 
     private void jSlider2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider2MouseDragged
 jLabel2.setText("y=" + jSlider2.getValue());
+jPanel2.repaint();
         // TODO add your handling code here:
     }//GEN-LAST:event_jSlider2MouseDragged
 
     private void jSlider3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider3MouseDragged
 jLabel3.setText("w=" + jSlider3.getValue());
+jPanel2.repaint();
         // TODO add your handling code here:
     }//GEN-LAST:event_jSlider3MouseDragged
 
     private void jSlider4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlider4MouseDragged
 jLabel4.setText("h=" + jSlider4.getValue());
+jPanel2.repaint();
+Graphics g;
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jSlider4MouseDragged
 
